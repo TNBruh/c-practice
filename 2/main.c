@@ -5,8 +5,6 @@
 // amogus
 #include "main.h"
 
-typedef struct FileMap FileMap;
-
 // start
 void main() {
     FileMap file_map = read_input("test.txt");
@@ -58,7 +56,7 @@ char **read_lines(FileMap *p_filemap) {
 
         //write
         *(lines + i * sizeof(char*)) = line;
-        // printf("%d %s", strlen(*(lines + i * sizeof(char*))), *(lines + i * sizeof(char*)));
+        printf("%d %s", strlen(*(lines + i * sizeof(char*))), *(lines + i * sizeof(char*)));
     }
 
     return lines;
