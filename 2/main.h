@@ -1,12 +1,12 @@
 #ifndef MAIN_H
 #define MAIN_H
 
-struct FileMap read_input(char* file_name);
-typedef struct FileMap {
+typedef struct {
     FILE *p_file;
     int line_count;
     int wpl_count;
 } FileMap;
-char **read_lines(struct FileMap *p_filemap);
+FileMap read_input(char* file_name);
+char **read_lines(FileMap *p_filemap);
 
 #endif
